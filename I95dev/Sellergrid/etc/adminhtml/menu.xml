@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="I95dev_Sellergrid::Seller" title="Seller" translate="title" module="I95dev_Sellergrid" sortOrder="200"  resource="I95dev_Sellergrid::parent"/>
+        <add id="I95dev_Sellergrid::Seller_details" title="Seller details" translate="title" module="I95dev_Sellergrid" sortOrder="200" parent="I95dev_Sellergrid::Seller" action="seller/details/index" resource="I95dev_Sellergrid::parent"/>
+        
+    </menu>
+</config>

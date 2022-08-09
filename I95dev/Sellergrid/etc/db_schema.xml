@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="Seller_details" resource="default" engine="innodb" comment="Seller Table">
+        <column xsi:type="smallint" name="id" padding="6" unsigned="true" nullable="false" identity="true" comment="ID"/>
+        <column xsi:type="text" name="first_name" nullable="false" comment="First Name"/>
+        <column xsi:type="text" name="last_name" nullable="false" comment="Last Name"/>
+        <column xsi:type="text" name="email" nullable="false" comment="Email"/>
+        <column xsi:type="int" name="phone" nullable="false" padding="10" default="0" identity="false" comment="Phone"/>
+        
+        <constraint xsi:type="primary" referenceId="PRIMARY"> 
+            <column name="id"/>
+        </constraint>        
+        <index referenceId="I95dev_Sellergrid_FIRST_NAME" indexType="fulltext">
+            <column name="first_name"/>
+        </index>
+        <index referenceId="I95dev_Sellergrid_LAST_NAME" indexType="fulltext">
+            <column name="last_name"/>
+        </index>
+        <index referenceId="I95dev_Sellergrid_EMAIL" indexType="fulltext">
+            <column name="email"/>
+        </index>
+        
+    </table>
+</schema>
+
